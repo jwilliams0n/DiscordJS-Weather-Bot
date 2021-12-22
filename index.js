@@ -1,5 +1,5 @@
 const { Client, Intents, MessageEmbed } = require('discord.js');
-const { prefix, botToken, apiToken, embedFooter, embedColour } = require('./config.json');
+const { prefix, botToken, apiToken } = require('./config.json');
 const axios = require('axios');
 const client = new Client({
     partials: [
@@ -46,8 +46,8 @@ client.on('messageCreate', (message) => {
                         { name: "**" + "Total Channels:" + "**", value: `${channelCount}`, inline: true },
                     )
                     .setThumbnail(icon)
-                    .setFooter(embedFooter)
-                    .setColor(embedColour)
+                    .setFooter('Made by Joshツ#6969')
+                    .setColor('#eb3434')
                 message.channel.send({ embeds: [serverinfoEmbed] });
                 break;
             case 'userinfo':
@@ -65,8 +65,8 @@ client.on('messageCreate', (message) => {
                         { name: "Account Age:", value: `${accountAge2}` + " days",inline: true },
                         { name: "Roles", value: `${listedRoles.join(", ")}` ,inline: false },
                     )
-                    .setFooter(embedFooter)
-                    .setColor(embedColour);
+                    .setFooter('Made by Joshツ#6969')
+                    .setColor('#eb3434');
                 message.channel.send({embeds: [messageAuthorInfoEmbed]});
                 break;
             case 'weather':
@@ -91,8 +91,8 @@ client.on('messageCreate', (message) => {
                             { name: `Cloudiness:`, value: `${cloudness}`, inline: true },
                         )
                         .setThumbnail(`http://openweathermap.org/img/w/${icon}.png`)
-                        .setColor(embedColour)
-                        .setFooter(embedFooter);
+                        .setColor('#eb3434')
+                        .setFooter('Made by Joshツ#6969');
                     message.channel.send({ embeds: [weatherEmbed] });
                 }).catch(err => {
                     message.reply(`Enter a vailid city name`)
