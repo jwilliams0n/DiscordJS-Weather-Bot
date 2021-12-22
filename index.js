@@ -2,9 +2,6 @@ const { Client, Intents, MessageEmbed } = require('discord.js');
 const { prefix, botToken, apiToken } = require('./config.json');
 const axios = require('axios');
 const client = new Client({
-    partials: [
-        "CHANNEL", "MESSAGE", "REACTION",
-    ],
     intents: [
         Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MESSAGES,
