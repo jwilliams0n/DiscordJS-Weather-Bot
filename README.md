@@ -1,4 +1,4 @@
-# DiscordJS-Weather-Bot
+# DiscordJS-Weather-Bot - Updated to DiscordJS v13
 Discord.JS Weather Bot that can be self hosted using your own bot and api token.
 
 A 24/7 hosted version of this bot can be invited to your server here: 
