@@ -21,10 +21,24 @@ https://discord.com/api/oauth2/authorize?client_id=881917566925308015&permission
   
 
 ### How to install + set up the bot:
-- Create a folder for your discord bot.
-- Download the code from github, into your newly created folder.
-- Replace `bot token here` with your bot token in `config.json`.
-- Replace `api token here` with your weather API token in `config.json`. 
-- Install the required modules through `npm install` in your terminal.
-- Run your bot by typing `node index.js` in your terminal.
-- You should see `... successfully logged in.` when you bot is working.
+- Clone repository:
+  ```
+  git clone https://github.com/Joshwgaming/DiscordJS-Weather-Bot
+  ```
+- Configure the bot in `config.json`:
+  ```
+  {
+    "prefix": "w!",
+    "botToken": "your bot token here",
+    "apiToken": "your api token here",
+  }
+  ```
+- Install the required npm modules:
+  ```
+  npm install
+  ```
+- Start your bot:
+  ```
+  node index.js
+  ```
+- Once started, you should see `... successfully logged in.` in your terminal.
