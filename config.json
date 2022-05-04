@@ -1,5 +1,8 @@
 {
-    "prefix": "w!",
     "botToken": "bot token here",
+    "prefix": "w!",
+    "guildId": "primary guild id here",
+    "clientId": "bot's id here",
+    "authorID": "your id here",
     "apiToken": "api token here"
 }
