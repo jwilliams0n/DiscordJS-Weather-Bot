@@ -1,4 +1,4 @@
-# DiscordJS-Weather-Bot - Updated to DiscordJS v13
+# DiscordJS-Weather-Bot - Now using slash commands!
 Discord.JS Weather Bot that can be self hosted using your own bot and api token.
 
 A 24/7 hosted version of this bot can be invited to your server here: 
@@ -6,10 +6,10 @@ https://discord.com/api/oauth2/authorize?client_id=881917566925308015&permission
 
 
 ### Bot Commands:
-- w!ping - Pong!
-- w!userinfo - View basic userinfo.
-- w!serverinfo - View basic serverinfo.
-- w!weather <city> - View the weather for a city.
+- /ping - Pong!
+- /userinfo - View basic userinfo.
+- /serverinfo - View basic serverinfo.
+- /weather <city> - View the weather for a city.
 
   
 ## If chosing to host your own version of the bot, follow the instructions below.
@@ -25,12 +25,15 @@ https://discord.com/api/oauth2/authorize?client_id=881917566925308015&permission
   ```
   git clone https://github.com/Joshwgaming/DiscordJS-Weather-Bot
   ```
-- Configure the bot in `config.json`:
+- Configure the bot in `/srv/config.json`:
   ```
   {
+    "botToken": "bot token here",
     "prefix": "w!",
-    "botToken": "your bot token here",
-    "apiToken": "your api token here",
+    "guildId": "primary guild id here",
+    "clientId": "bot's id here",
+    "authorID": "your id here",
+    "apiToken": "api token here"
   }
   ```
 - Install the required npm modules:
@@ -41,4 +44,4 @@ https://discord.com/api/oauth2/authorize?client_id=881917566925308015&permission
   ```
   node index.js
   ```
-- Once started, you should see `... successfully logged in.` in your terminal.
+- Once started, you should see `Logged in as` in your terminal.
