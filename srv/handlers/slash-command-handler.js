@@ -15,9 +15,11 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(botToken);
 
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: slashCommands })
-	.then(() => console.log('Successfully registered application/slash commands.'))
-	.catch(console.error);
+await rest.put(
+	Routes.applicationCommands(clientId),
+	{ body: slashCommands },
+).then(() => console.log('Successfully registered application/slash commands.'))
+ .catch(console.error);
 
 client.on('interactionCreate', async interaction => {
 		if (!interaction.isCommand()) return;
